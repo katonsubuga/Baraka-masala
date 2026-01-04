@@ -1,0 +1,96 @@
+/* General Reset and Typography */
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h1 {
+    color: #5a7d5c; /* Deep green */
+    font-size: 2.8em;
+    margin-bottom: 5px;
+}
+h2 {
+    color: #a8b894; /* Lighter, subtle green */
+    margin-top: 40px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.8em;
+}
+
+/* Image Styling */
+.image-container {
+    margin: 40px 0;
+    text-align: center;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+/* Content Layout (Columns) */
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text-column {
+    flex: 1;
+    min-width: 300px; /* Ensures columns don't get too narrow */
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+/* List and Quote Styling */
+.commitment-list {
+    list-style: none;
+    padding: 0;
+}
+.commitment-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+.commitment-list li::before {
+    content: '🌿'; /* Nice visual marker for commitment */
+    position: absolute;
+    left: 0;
+}
+.quote {
+    font-style: italic;
+    color: #5a7d5c;
+    margin-top: 30px;
+    padding: 20px;
+    border-left: 4px solid #a8b894;
+    background-color: #f9fdf9;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+    .text-column {
+        padding: 0 5px;
+    }
+}

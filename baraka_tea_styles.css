@@ -1,0 +1,306 @@
+/* General Reset and Base Styles (No Change) */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #38761d;
+    text-align: center;
+}
+
+.content-section {
+    padding: 80px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #a45a2a;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #83481e;
+}
+
+/* Header & Navigation (No Change) */
+header {
+    background-color: #fff;
+    border-bottom: 3px solid #f6b400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #a45a2a;
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 1.5em;
+    margin-right: 8px;
+    color: #38761d; 
+}
+
+header nav a {
+    color: #38761d;
+    margin-left: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #a45a2a;
+}
+
+/* ------------------------------------------------ */
+/* Hero Section - UPDATED FOR VIDEO BACKGROUND */
+/* ------------------------------------------------ */
+.hero-section {
+    position: relative; /* Crucial for positioning video and content */
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 10px solid #f6b400;
+    overflow: hidden; /* Ensures video doesn't bleed out */
+}
+
+#heroVideo {
+    position: absolute; /* Place video behind content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the entire section */
+    z-index: 1; /* Keep video at the back */
+    opacity: 0.7; /* Reduce opacity for better readability */
+}
+
+.hero-content {
+    position: relative; /* Bring content above the video */
+    z-index: 5;
+    max-width: 900px;
+    padding: 30px;
+    /* Semi-transparent background for text readability over the video */
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #a45a2a;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #555;
+}
+/* ------------------------------------------------ */
+
+/* Product Focus Section (No Change) */
+.product-focus-section {
+    background-color: #fff8e1; 
+}
+
+.product-details-flex {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.product-image-container {
+    width: 40%;
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    font-style: italic;
+    color: #38761d;
+    margin-top: 10px;
+}
+
+.product-description {
+    width: 60%;
+    text-align: left;
+}
+
+.product-description h3 {
+    text-align: left;
+    color: #a45a2a;
+    border-bottom: 2px solid #f6b400;
+    padding-bottom: 10px;
+}
+
+.product-description h4 {
+    color: #38761d;
+    margin-top: 20px;
+}
+
+.product-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-description li {
+    margin-bottom: 8px;
+}
+
+.link-button {
+    margin-top: 25px;
+    background-color: #f6b400; 
+    color: #333;
+    font-weight: 700;
+}
+
+.link-button:hover {
+    background-color: #e0a500;
+}
+
+/* Serving Suggestion Section (No Change) */
+.serving-suggestion-section {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+
+.serving-image-grid {
+    text-align: center;
+}
+
+.serving-image-large {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* About Us Section (No Change) */
+.about-section {
+    background-color: #e6e9e4;
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.batch-image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.batch-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer & Contact (No Change) */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    font-weight: 300;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+/* Media Queries (No Change) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header nav a {
+        margin: 5px 10px;
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .product-details-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .product-image-container, .product-description {
+        width: 100%;
+    }
+    .product-description h3, .product-description h4 {
+        text-align: center;
+    }
+    .product-description ul {
+        text-align: left;
+        padding-left: 20px;
+    }
+    .batch-image-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
