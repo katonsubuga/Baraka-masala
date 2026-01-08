@@ -48,9 +48,14 @@
         </div>
             <div class="contact-form-container">
                 <h2>You Can Now Order</h2>
-                <form id="orderForm" class="contact-form">
+                <form action="https://formsubmit.co/katoabdul737@gmail.com" method="POST">
+
 
   <div class="form-row">
+      <input type="hidden" name="_subject" value="New Order - Baraka Chai Masala">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
     <input type="text" id="name" placeholder="Full Name" required>
     <input type="email" id="email" placeholder="Email Address" required>
     <input type="text" id="location" placeholder="Location" required>
@@ -122,6 +127,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e) {
 </body>
 
 </html>
+
 
 
 
