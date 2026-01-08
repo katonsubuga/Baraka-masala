@@ -48,23 +48,70 @@
         </div>
             <div class="contact-form-container">
                 <h2>You Can Now Order</h2>
-                <form action="#" method="POST" class="contact-form">
-                    
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                         <input type="text" name="Location" placeholder="Location" required>
-                        <input type="text" name="Contact" placeholder="Contact" required>
-                    </div>
+                <form id="orderForm" class="contact-form">
 
-                    <textarea name="message" placeholder="Your detailed message or inquiry..." rows="7" required></textarea>
-                    
-                    <button type="submit" class="submit-button">Submit</button>
-                </form>
+  <div class="form-row">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <input type="text" id="location" placeholder="Location" required>
+    <input type="text" id="contact" placeholder="Contact" required>
+  </div>
+
+  <textarea id="message" placeholder="Your detailed message or inquiry..." rows="7" required></textarea>
+
+  <button type="submit" class="submit-button">Submit</button>
+</form>
+
+<p id="confirmation"
+   style="display:none; text-align:center; color:green; font-weight:bold; margin-top:15px;">
+  ✅ Thank you! Your order has been sent successfully.
+</p>     
             </div>
 
         </div>
     </section>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const location = document.getElementById("location").value;
+  const contact = document.getElementById("contact").value;
+  const message = document.getElementById("message").value;
+
+  const orderText =
+    "NEW ORDER - BARAKA CHAI MASALA\n\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Location: " + location + "\n" +
+    "Contact: " + contact + "\n\n" +
+    "Message:\n" + message;
+
+  // Show confirmation message
+  document.getElementById("confirmation").style.display = "block";
+
+  // Send to WhatsApp
+  window.open(
+    "https://wa.me/256774140531?text=" + encodeURIComponent(orderText),
+    "_blank"
+  );
+
+  // Send to Email
+  window.location.href =
+    "mailto:katoabdul737@gmail.com?subject=New Order - Baraka Chai Masala&body=" +
+    encodeURIComponent(orderText);
+
+  // Reset form
+  this.reset();
+});
+</script>
+
+
+
+
+    
 
     <footer>
         <div class="container">
@@ -75,6 +122,7 @@
 </body>
 
 </html>
+
 
 
 
