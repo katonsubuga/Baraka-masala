@@ -47,19 +47,17 @@
 
         </div>
             <div class="container">
-  <form action="#" method="POST" class="contact-form">
-                    
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                         <input type="text" name="Location" placeholder="Location" required>
-                        <input type="text" name="Contact" placeholder="Contact" required>
-                    </div>
+ <form action="https://formsubmit.co/katoabdul737@gmail.com" method="POST">
 
-                    <textarea name="message" placeholder="Your detailed message or inquiry..." rows="7" required></textarea>
-                    
-                    <button type="submit" class="submit-button">Submit</button>
-                </form>
+  <input type="text" name="Name" placeholder="Full Name" required>
+  <input type="email" name="Email" placeholder="Email Address" required>
+  <textarea name="Message" placeholder="Test message" required></textarea>
+
+  <input type="hidden" name="_subject" value="TEST ORDER - Baraka Chai Masala">
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Send Test</button>
+</form>
 
 </div>
   
@@ -124,6 +122,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e) {
 </body>
 
 </html>
+
 
 
 
