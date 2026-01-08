@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        h1 {
+  text-align: center;
+  margin: 35px 0 20px 0 !important;
+}
+
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Get in Touch</title>
@@ -46,15 +53,25 @@
                 </div>
 
         </div>
-            <div class="contact-form-container">
-                <h2>You Can Now Order</h2>
-               <form action="https://formsubmit.co/katoabdul737@email.com" method="POST">
-     <input type="text" name="name" required>
-     <input type="email" name="email" required>
-    <input type="text" name="Contact" placeholder="Contact" required>
-    <textarea name="Message" placeholder="Order details" required></textarea>
-     <button type="submit">Send</button>
-</form>
+            <div class="container">
+  <h1>FormSubmit Demo</h1>
+  <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+  </form>
+</div>
   
 
 <p id="confirmation"
@@ -117,6 +134,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e) {
 </body>
 
 </html>
+
 
 
 
