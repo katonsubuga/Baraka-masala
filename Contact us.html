@@ -20,96 +20,119 @@
                 <a href="Contact us.html">Contact us</a>
             </nav>
         </div>
-      
+
+        <style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f5f5f5;
+}
+.container{
+  max-width:600px;
+  margin:40px auto;
+  background:#fff;
+  padding:25px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+h2{text-align:center;}
+input, textarea, select, button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+button{
+  background:#2e7d32;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{background:#1b5e20;}
+#confirmation{
+  display:none;
+  margin-top:15px;
+  color:green;
+  font-weight:bold;
+  text-align:center;
+}
+</style>
+     
     </header>
+    
 
         <section class="contact-grid-section">
         <div class="container contact-grid">
             
-            <div class="contact-details-box">
-                <h2>Our Contact Channels</h2>
-                <div class="detail-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p><strong>Address:</strong>Mengo Along Side Kabaka Ajagala Road</p>
-                </div>
-                <div class="detail-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <p><strong>Phone:</strong>+256774140531</p>
-                </div>
-                <div class="detail-item">
-                    <i class="fas fa-envelope"></i>
-                    <p><strong>Email:</strong>katoabdul737@gmail.com</p>
-                </div>
-                <div class="detail-item">
-                    <i class="fas fa-clock"></i>
-                    <p><strong>Hours:</strong>24/7</p>
-                </div>
+            <body>
 
-        </div>
-            <div class="container">
-<form action="#" method="POST" class="contact-form">
-                    
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                         <input type="text" name="Location" placeholder="Location" required>
-                        <input type="text" name="Contact" placeholder="Contact" required>
-                    </div>
+<div class="container">
+<h2>🫖 Baraka Chai Masala – Order Form</h2>
 
-                    <textarea name="message" placeholder="Your detailed message or inquiry..." rows="7" required></textarea>
-                    
-                    <button type="submit" class="submit-button">Submit</button>
-                </form>
+<form id="orderForm"
+      action="https://formsubmit.co/katoabdul737@gmail.com"
+      method="POST">
+
+<input type="text" name="Customer Name" placeholder="Full Name" required>
+<input type="email" name="Email" placeholder="Email Address" required>
+<input type="text" name="Phone" placeholder="Phone Number" required>
+<input type="text" name="Location" placeholder="Delivery Location" required>
+
+<select name="Product" required>
+  <option value="">Select Product</option>
+  <option>Baraka Chai Masala – 100g</option>
+  <option>Baraka Chai Masala – 250g</option>
+  <option>Baraka Chai Masala – 500g</option>
+</select>
+
+<input type="number" name="Quantity" placeholder="Quantity" min="1" required>
+
+<textarea name="Order Details" placeholder="Additional instructions (optional)"></textarea>
+
+<!-- FormSubmit settings -->
+<input type="hidden" name="_subject" value="NEW ORDER – Baraka Chai Masala">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+<button type="submit">Submit Order</button>
+</form>
+
+<p id="confirmation">
+✅ Thank you! Your order has been submitted successfully.<br>
+We will contact you shortly.
+</p>
 
 </div>
-  
-
-<p id="confirmation"
-   style="display:none; text-align:center; color:green; font-weight:bold; margin-top:15px;">
-  ✅ Thank you! Your order has been sent successfully.
-</p>     
-            </div>
-
-        </div>
-    </section>
 
 <script>
-document.getElementById("orderForm").addEventListener("submit", function(e) {
+document.getElementById("orderForm").addEventListener("submit", function(e){
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const location = document.getElementById("location").value;
-  const contact = document.getElementById("contact").value;
-  const message = document.getElementById("message").value;
-
-  const orderText =
-    "NEW ORDER - BARAKA CHAI MASALA\n\n" +
-    "Name: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Location: " + location + "\n" +
-    "Contact: " + contact + "\n\n" +
-    "Message:\n" + message;
-
-  // Show confirmation message
-  document.getElementById("confirmation").style.display = "block";
+  const data = new FormData(this);
+  let text = "NEW ORDER - BARAKA CHAI MASALA\n\n";
+  for (let pair of data.entries()) {
+    if(!pair[0].startsWith("_")){
+      text += pair[0] + ": " + pair[1] + "\n";
+    }
+  }
 
   // Send to WhatsApp
   window.open(
-    "https://wa.me/256774140531?text=" + encodeURIComponent(orderText),
+    "https://wa.me/256774140531?text=" + encodeURIComponent(text),
     "_blank"
   );
 
-  // Send to Email
-  window.location.href =
-    "mailto:katoabdul737@gmail.com?subject=New Order - Baraka Chai Masala&body=" +
-    encodeURIComponent(orderText);
+  // Submit form to email
+  fetch(this.action, {
+    method: "POST",
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
 
-  // Reset form
+  document.getElementById("confirmation").style.display = "block";
   this.reset();
 });
 </script>
-
 
 
 
@@ -124,6 +147,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e) {
 </body>
 
 </html>
+
 
 
 
