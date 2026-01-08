@@ -7,6 +7,19 @@ body {
     padding: 0;
     background-color: #fcfcfc;
 }
+/* Header & Navigation (No Change) */
+header {
+    background-color: #fff;
+    border-bottom: 3px solid #f6b400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+    padding: 20px;
+}
+
+
+
 .container {
     width: 90%;
     max-width: 1100px;
@@ -93,4 +106,5 @@ footer {
     .text-column {
         padding: 0 5px;
     }
+
 }
