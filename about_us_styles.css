@@ -12,7 +12,7 @@ header {
     background-color: #fff;
     border-bottom: 3px solid #f6b400;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky:left; 
+    position: sticky; 
     top: 0; 
     z-index: 1000;
     padding: 20px;
@@ -74,6 +74,7 @@ h2 {
     margin-bottom: 15px;
     padding-left: 25px;
     position: relative;
+     text-decoration: none;
 }
 .commitment-list li::before {
     content: '🌿'; /* Nice visual marker for commitment */
@@ -108,5 +109,6 @@ footer {
     }
 
 }
+
 
 
