@@ -11,60 +11,14 @@ body {
 header {
 
 /* Header & Navigation */
-header {
     background-color: #fff;
     border-bottom: 3px solid #f6b400;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
+    position: sticky; 
+    top: 0; 
     z-index: 1000;
     padding: 20px;
 }
-
-/* Navigation container */
-header nav {
-    display: flex;
-    justify-content: flex-start; /* LEFT ALIGN */
-    align-items: center;
-    gap: 25px;
-}
-
-/* Navigation links */
-header nav a {
-    color: #38761d;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-header nav a:hover {
-    color: #a45a2a;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
 
 .container {
     width: 90%;
@@ -155,6 +109,7 @@ footer {
     }
 
 }
+
 
 
 
